@@ -1,0 +1,92 @@
+
+body
+  font-family "Source Sans Pro", sans-serif
+  background #F2F3F5
+  margin 0
+
+h1
+  background #262626
+  color white
+  padding 25px
+  font-weight 100
+  letter-spacing 1.5
+  margin 0
+
+h2
+  margin 0
+  padding-top 10px
+  padding-bottom 10px
+
+.graphs
+  background white
+  border-left 1px solid #DEDEDE
+  height 100%
+  padding 30px
+  float right
+
+  #thinker
+    position relative
+    width 175px
+    height 175px
+    top -240px
+    left 63px
+
+    transition transform 2s ease-in
+
+    &.left
+      transform rotate(-20deg)
+
+    &.right
+      transform rotate(20deg)
+
+#poll-list
+  a
+    text-decoration none
+    font-size 18px
+
+.content
+  padding-left 20px
+
+.choice
+  background white
+  border 1px solid #DEDEDE
+  display inline-block
+  min-width 250px
+  margin 10px 20px 10px 0
+
+  h3
+    margin-top 5px
+    margin-left 10px
+    font-weight bold
+    font-size 16px
+
+  .counter
+    float right
+    color white
+    font-size 36px
+    padding 15px
+
+.button
+  text-decoration none
+  background #E8E8E8
+  margin-left 10px
+  display inline-block
+  padding 3px 10px
+  border-radius 3px
+  border 1px solid #dedede
+  font-size 12px
+  color #5E5E5E
+  letter-spacing 1.5px
+  text-transform uppercase
+  font-weight 500
+
+  &hover
+    background darkgrey
+    color white
+
+#vote-pie
+  width 300px
+  height 300px
+
+  text
+    display none
