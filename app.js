@@ -22,6 +22,13 @@ bluebird.coroutine(function*() {
         r.table("votes").indexCreate("poll"),
         r.table("votes").indexCreate("choice")
       ]);
+
+      yield r.table("polls").insert({
+        title: "Who is the best Star Trek captain?",
+        choices: ["Captain Kirk", "Captain Archer", "Captain Janeway", "Captain Picard", "Captain Sisko"].map(i => ({id: r.uuid(), label: i})),
+        created: r.now()
+      });
+
     }
 
     (yield r.table("votes").changes()("new_val")).each((err, vote) => {
